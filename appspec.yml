@@ -3,13 +3,3 @@ os: windows
 files:
   - source: \
     destination: C:\ExploringAspNetCore
-hooks:
-  ApplicationStop:
-    - location: .\scripts\RemoveApp.ps1
-      timeout: 30
-  ApplicationStart:
-    - location: .\scripts\InstallApp.ps1
-      timeout: 300
-  ValidateService:
-    - location: .\scripts\ValidateInstall.ps1
-      timeout: 300
