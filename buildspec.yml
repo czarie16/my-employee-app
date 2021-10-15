@@ -10,4 +10,6 @@ phases:
       dotnet publish -c release MyEmployeeApp/MyEmployeeApp.csproj -o ./publish
 artifacts:
   files:
+    - scripts/**/*
+    - appspec.yml
     - ./publish/**/*
