@@ -6,7 +6,6 @@ phases:
       dotnet restore MyEmployeeApp/MyEmployeeApp.csproj
   build:
     commands:
-      dotnet build MyEmployeeApp/MyEmployeeApp.csproj
       dotnet publish -c release MyEmployeeApp/MyEmployeeApp.csproj -o ./publish
 artifacts:
   files:
