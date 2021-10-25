@@ -7,8 +7,12 @@ phases:
   build:
     commands:
       dotnet publish -c release MyEmployeeApp/MyEmployeeApp.csproj -o ./publish
+  post_build:
+    commands:
+      mv appspec.yml ./publish
+      mv installScripts ./publish
 artifacts:
   files:
-    - scripts/**/*
-    - appspec.yml
-    - ./publish/**/*
+    - '*'
+    - '**/*' 
+    base-directory: ./publish
